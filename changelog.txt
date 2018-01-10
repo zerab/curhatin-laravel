@@ -1,0 +1,2 @@
+1. add username to user tables
+2. add image path to user tables

@@ -7,7 +7,7 @@
           <div class="leftsideContent">
             <div class="profileBubble">
               <center><img src="images/7cf.jpg" class="photo-round"><br>
-                      <span style="font-weight:bold;text-transform:capitalize;">NULL</span><br>
+                      <span style="font-weight:bold;text-transform:capitalize;">{{ $user->firstname }} {{ $user->lastname }}</span><br>
                       <span style="text-decoration:italic;font-size:15px;"><i>Honorable Member</i></span><br>
               </center>
             </div>
@@ -23,6 +23,6 @@
                 <a style="cursor:pointer;" onclick="javascript: sendRequest('home.php', '', 'content', 'div', '');"><i class="fa fa-handshake-o fa-1x"></i></a>
             </div>
 
-          <a href="logout.php"><button type="button">Logout</button></a>
+          <a href="/logout"><button type="button">Logout</button></a>
           </div>
         </div>

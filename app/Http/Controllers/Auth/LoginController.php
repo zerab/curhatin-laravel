@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\MessageBag;
 
 class LoginController extends Controller
 {
@@ -35,5 +37,26 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function authenticate()
+    {
+      $email = request('email');
+      $password = request('password');
+      if ($user = Auth::attempt(['email' => $email, 'password' => $password]))
+      {
+         return redirect('/home')->with('alert-success-login', 'You have been succesfully logged in.');
+      }
+      else
+      {
+        $errors = new MessageBag(['password' => ["Your email/password doesn't match."]]);
+        return redirect('/')->withErrors($errors)->with('password');
+      }
+    }
+
+    public function logout()
+    {
+      Auth::logout();
+      return redirect('/')->with('alert-success-logout', 'You have been succesfully logged out.');
     }
 }

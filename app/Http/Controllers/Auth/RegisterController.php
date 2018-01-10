@@ -47,11 +47,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+
     }
 
     /**
@@ -60,12 +56,29 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+    /* $this->validate(request(), [
+          'firstname' => 'required|string|max:32',
+          'lastname' => 'required|string|max:32',
+          'email' => 'required|string|email|max:64|unique:users',
+          'birthplace' => 'required|max:64',
+          'gender' => 'required|max:1',
+          'phone' => 'required|min:6|max:16|numeric',
+          'password' => 'required|string|min:6|confirmed',
+          'password_confirmation' => 'required|string|min:6|confirmed'
+      ]);
+*/
+      $user = User::create([
+          'firstname' => request('firstname'),
+          'lastname' => request('lastname'),
+          'email' => request('email'),
+          'birthplace' => request('birthplace'),
+          'gender' => request('gender'),
+          'phone' => request('phone'),
+          'password' => bcrypt(request('password'))
+      ]);
+      $user->save();
+      return redirect('/');
     }
 }
