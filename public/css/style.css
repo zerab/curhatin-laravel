@@ -10,7 +10,7 @@ body
   font-family:helvetica;
 }
 
-.sidenav
+.side-nav
 {
     height: 100%;
     width: 25%;
@@ -55,11 +55,11 @@ body
 {
   height:60px;
 }
-.leftsideContent
+.leftside-content
 {
   margin-top:80px;
 }
-.profileBubble
+.profile-bubble
 {
   color:rgb(0, 121, 136);
 }
@@ -69,19 +69,24 @@ body
   height:150px;
   width:150px;
   background-color:#ddd;
-  box-shadow: 0 0px 5px 0 gray;
+}
+.photo-round:hover
+{
+  box-shadow: 0 0px 10px 0 gray;
+  transition: all 0.5s ease;
 }
 .profileBubble
 {
 
 }
-.sideMenu
+.side-footer
 {
   background:rgb(0, 121, 136);
   position:absolute;
   bottom:0;
   width:100%;
 }
+/*
 .sideMenu i
 {
   text-align:center;
@@ -107,6 +112,7 @@ body
 .sideMenu i:hover
 {
 }
+*/
 #userStats
 {
 
@@ -120,7 +126,104 @@ body
   background-color:#007A89;
   display:inline;
 }
+.nav-link a:link
+{
+  color:rgb(0, 121, 136);
+  text-decoration:none;
+}
+ .nav-link a:active
+{
+  color:rgb(0, 121, 136);
+  background-color:rgb(0, 121, 136);
+  text-decoration:none;
+}
+ .nav-link a:visited
+ {
+   color:rgb(0, 121, 136);
+   text-decoration:none;
+ }
+.nav-link a:hover
+{
+  color:white;
+}
+.nav-link-logout a:link
+{
+  color:#E53935;
+  text-decoration:none;
+}
+ .nav-link-logout a:active
+{
+  color:#E53935;
+  background-color:#E53935;
+  text-decoration:none;
+}
+ .nav-link-logout a:visited
+ {
+   color:#E53935;
+   text-decoration:none;
+ }
+ .nav-link-logout a:hover
+ {
+   color:white;
+ }
 .ratingStat i
 {
   color: #FFCA28;
+}
+#nav-button a
+{
+  display:block;
+  width:100%;
+  padding:15px 0;
+}
+.nav-icon
+{
+  padding:16px 5px;
+  background:rgb(0, 121, 136);
+  margin:0;
+}
+.nav-link-active
+{
+  background:rgb(0, 121, 136);
+}
+.nav-link
+{
+  margin:10px 14px;
+  width:90%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-left: 5px solid rgb(0, 121, 136);
+  font-weight:bold;
+  background: linear-gradient(to right, rgb(0, 121, 136) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition:all 0.5s ease;
+  text-align:center;
+}
+.nav-link-logout
+{
+  background: linear-gradient(to right, #E53935 50%, white 50%);
+  border-left: 5px solid #E53935;
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition:all 0.5s ease;
+  margin:10px 14px;
+  width:90%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-weight:bold;
+  text-align:center;
+  color: #E53935;
+}
+.nav-link-logout:hover
+{
+  color:black;
+  background-position:left bottom;
+}
+.nav-link:hover
+{
+  background-position:left bottom;
+  color:white;
+}
+.nav-title
+{
+  padding:15px 10px;
 }
