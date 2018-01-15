@@ -74,6 +74,7 @@ class RegisterController extends Controller
           'lastname' => request('lastname'),
           'email' => request('email'),
           'birthplace' => request('birthplace'),
+          'birthdate' => request('birthdate'),
           'gender' => request('gender'),
           'phone' => request('phone'),
           'password' => bcrypt(request('password'))
