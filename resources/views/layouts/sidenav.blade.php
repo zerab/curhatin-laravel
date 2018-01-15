@@ -11,7 +11,25 @@
                       <span style="text-decoration:italic;font-size:15px;"><i>Honorable Member</i></span><br>
               </center>
             </div>
-            <div id="">
+            <div id="user-stats">
+              <div id="rating-stat" class="stat">
+                <div class="rating">
+                  <span class="fa fa-star fa-2x"></span>
+                  <span class="stat-value">5.0</span>
+                </div>
+              </div>
+              <div id="flag-stat" class="stat">
+                <div class="rating">
+                  <span class="fa fa-flag fa-2x"></span>
+                  <span class="stat-value">0</span>
+                </div>
+              </div>
+              <div id="match-stat" class="stat">
+                <div class="rating">
+                  <span class="fa fa-handshake-o fa-2x"></span>
+                  <span class="stat-value">0</span>
+                </div>
+              </div>
 
             </div>
             <div id="nav-button">
