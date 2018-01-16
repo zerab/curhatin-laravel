@@ -15,7 +15,7 @@
               <div id="rating-stat" class="stat">
                 <div class="rating">
                   <span class="fa fa-star fa-2x"></span>
-                  <span class="stat-value">5.0</span>
+                  <span class="stat-value">0.0</span>
                 </div>
               </div>
               <div id="flag-stat" class="stat">

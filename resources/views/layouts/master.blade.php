@@ -13,7 +13,7 @@
     </head>
     <body>
     @include('layouts.sidenav')
-            <div id="mainSection" class="section">
+            <div id="main-section" class="section">
               @yield('content')
             </div>
 

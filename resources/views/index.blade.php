@@ -1,5 +1,13 @@
 @extends('layouts.master')
-@section('title', 'Index Bang')
+@section('title', 'Home - Curhatin')
 @section('content')
-<span style="font-size:100px">Test</span>
+<?php $user = \Auth::user(); ?>
+<div id="content-home">
+    <form action="" method="post">
+      <div class="status-group">
+        <div class="status-label">What's on your mind?</div>
+        <div class="status-input"><textarea name="body"></textarea></div>
+      </div>
+    </form>
+</div>
 @endsection
