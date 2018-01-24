@@ -22,5 +22,15 @@ class UsersTableSeeder extends Seeder
             'phone' => '081234567890',
             'password' => bcrypt('abihu')
         ]);
+        DB::table('admins')->insert([
+            'firstname' => 'Mister',
+            'lastname' => 'Admin',
+            'email' => 'admin@admin.com',
+            'birthdate' => date('y-m-d', strtotime('2000/12/28')),
+            'birthplace' => 'Surabaya',
+            'gender' => 'm',
+            'phone' => '081234567890',
+            'password' => bcrypt('admin')
+        ]);
     }
 }
