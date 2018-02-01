@@ -50,7 +50,7 @@ class LoginController extends Controller
       else
       {
         $errors = new MessageBag(['password' => ["Your email/password doesn't match."]]);
-        return redirect('/')->withErrors($errors)->with('password');
+        return redirect()->back()->withErrors($errors)->with('password');
       }
     }
 

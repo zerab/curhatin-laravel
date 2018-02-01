@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Home - Curhatin')
 @section('content')
+@include('layouts.alert')
 <?php $user = \Auth::user(); ?>
 <div id="content-home">
     <form action="" method="post">

@@ -45,12 +45,12 @@
             </div>
               <div class="nav-link">
               <a style="cursor:pointer;" href="/matchup">
-                </span><span class="nav-title">Match Up</span>
+                <span class="nav-title">Match Up</span>
               </a>
               </div>
               <div class="nav-link nav-link-logout">
               <a style="cursor:pointer;" href="/logout">
-              </span><span class="nav-title">Logout</span>
+              <span class="nav-title">Logout</span>
               </a>
               </div>
             </div>

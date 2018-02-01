@@ -1,4 +1,5 @@
 <center>
+  <h2>Login Admin</h2>
   <form action="/admin/login" method="POST" autocomplete="on">
     {{ csrf_field() }}
     <input type="email" name="email" placeholder="Email"><br>

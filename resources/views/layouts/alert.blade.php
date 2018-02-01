@@ -1,6 +1,19 @@
 @if ($alert = Session::get('alert-success-login'))
-  <div class="alert alert-success dismissable fade-in">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <div class="alert success">
+    <span class="closebtn">&times;</span>
       {{ $alert }}
   </div>
 @endif
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+</script>
