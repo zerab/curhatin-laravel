@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+font-family: 'Roboto';
+src: url("{{ URL::asset('fonts/Roboto-Regular.ttf') }}");
+}
+
 html
 {
   height:100%;
@@ -9,11 +13,17 @@ body
   margin:0px;
   padding:0px;
   background:#fafafa;
-  font-family:'Roboto', helvetica;
+  font-family:'Roboto ', helvetica;
+}
+ .wrapper
+{
+  position: relative;
+  top:10px;
+  left:0px;
 }
 .side-nav
 {
-    height: 96%;
+    height: 100%;
     width: 22%;
     position: fixed;
     z-index:-1;
@@ -22,10 +32,8 @@ body
     background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
-    margin:1%;
     transition: 0.5s;
     float:left;
-    border-radius:10px 0 0 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .section
@@ -33,15 +41,12 @@ body
   height: 96%;
   width: 75%;
   position: fixed;
-  right: 0;
-  background-color: white;
+  right: 12.5px;
   overflow-x: hidden;
   overflow-y: auto;
   transition: 0.5s;
   float:right;
-  margin:1%;
-  border-radius:0 10px 10px 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
 }
 .side-nav-header
 {
@@ -75,32 +80,19 @@ body
   color:rgb(0, 121, 136);
   font-size:18px;
 }
-.content-title
-{
-  width:100%;
-  background-color:rgb(0, 121, 136);
-  text-align:center;
-  padding:5px 0;
-}
-.content-title span
-{
-  font-family: 'Roboto';
-  font-size:15px;
-  color:white;
-  background-color:rgb(0, 121, 136);
-}
-.nav-link a:link
+
+.nav-buttons a:link
 {
   color:rgb(0, 121, 136);
   text-decoration:none;
 }
- .nav-link a:active
+ .nav-buttons a:active
 {
   color:rgb(0, 121, 136);
 
   text-decoration:none;
 }
- .nav-link a:visited
+ .nav-buttons a:visited
  {
    color:rgb(0, 121, 136);
    text-decoration:none;
@@ -112,17 +104,17 @@ body
 }
 .nav-link
 {
-  width:100%;
+  width:inherit;
   background:white;
   text-align:center;
   margin:0px auto;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   cursor: pointer;
   transition: all 0.1s linear;
   color:rgb(0, 121, 136);
   padding:15px;
   font-weight:bold;
-  border-left: 5px solid rgb(0, 121, 136);
+  margin:5px;
+  border: 1px solid #ddd;
 }
 .tables-menu
 {
@@ -138,5 +130,75 @@ body
 {
   text-align:center;
   width:27%;
+  background:red;
+}
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom:0px;
+    border:none;
+}
+.table-wrapper
+{
+
+  margin:5px;
+  background-color:white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width:98%;
+  overflow-x: auto;
+}
+table.table
+{
+  background:white;
+  border-collapse:collapse;
+  font-size:14px;
+  border: 1px solid #ddd;
+  width:100%;
+
+}
+.table th
+{
+  border-top: 1px solid #ddd;
+  background: #eee;
+  padding:1.5% 1%;
+}
+.table td
+{
+  border-top: 1px solid #ddd;
+  padding:1.5% 1%;
+}
+.table-title
+{
+  font-weight:bold;
+  font-size:25px;
+  padding:10px;
+  width:290px;
+}
+.button
+{
+  padding:10px;
+  margin:2px;
+  border-radius:5px;
+  color:white;
+}
+.button-red
+{
+  background:#e74c3c;
+}
+.button-blue
+{
+  background:#2980b9;
+}
+ul.pagination
+{
+
+  list-style-type:none;
+}
+ul.pagination li
+{
+  display:inline;
+  padding:10px;
   background:red;
 }

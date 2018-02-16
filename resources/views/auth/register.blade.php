@@ -3,6 +3,7 @@
     {{ csrf_field() }}
     <input type="text" name="firstname" placeholder="First Name"><br>
     <input type="text" name="lastname" placeholder="Last Name"><br>
+    <input type="text" name="username" placeholder="Username"><br>
     <input type="email" name="email" placeholder="Email"><br>
     <input type="date" name="birthdate" placeholder="Birth Date"><br>
     <input type="text" name="birthplace" placeholder="Birth Place"><br>

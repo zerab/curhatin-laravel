@@ -19,17 +19,55 @@
     </div>
   </div>-->
   <div class="nav-buttons">
-  <div class="nav-link">
-    <a href="/admin"><span class="nav-title">Dashboard</span></a>
+  <a href="/admin"><div class="nav-link">
+    <span class="nav-title">Dashboard</span>
+  </div></a>
+  <a href="/admin/user"><div class="nav-link">
+    <span class="nav-title">User Management</span>
+  </div></a>
+  <a href="/admin/counselor"><div class="nav-link">
+    <span class="nav-title">Counselor Management</span>
   </div>
+</a>
+  <a href="/admin/category">
   <div class="nav-link">
-    <span class="nav-title">Tables</span><span class="fa fa-caret-right" style="float:right;"></span>
+    <span class="nav-title">Category Management</span>
   </div>
+  </a>
+<a href="/admin/rating">
   <div class="nav-link">
-    <a href="/admin"><span class="nav-title">Dashboard</span></a>
+    <span class="nav-title">Rating Management</span>
   </div>
+</a>
   <div class="nav-link">
-    <a href="/admin"><span class="nav-title">Dashboard</span></a>
+    Others<span class="fa fa-caret-down" style="float:right;"></span>
   </div>
+ 
+  <div class="panel">
+    try
+    try
+  </div>
+<a href="/admin/flagging">
+  <div class="nav-link">
+    <span class="nav-title">Flagging Management</span>
+  </div>
+</a>
+
 </div>
 </div>
+<script>
+var acc = document.getElementsByClassName("nav-link");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>

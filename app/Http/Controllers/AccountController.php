@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
     public function view()
     {
-      $user = Auth::user();
+      $user = Auth::user()->paginate(1);
       return view('account.view')->with('user', $user);
     }
 }

@@ -31,3 +31,4 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::get('/admin', 'AdminController@dashboard');
   Route::get('/admin/logout', 'AdminController@logout');
+  Route::get('/admin/user', 'UserController@index');

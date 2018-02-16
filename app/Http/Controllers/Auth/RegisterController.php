@@ -72,6 +72,7 @@ class RegisterController extends Controller
       $user = User::create([
           'firstname' => request('firstname'),
           'lastname' => request('lastname'),
+          'username' => request('username'),
           'email' => request('email'),
           'birthplace' => request('birthplace'),
           'birthdate' => request('birthdate'),
