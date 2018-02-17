@@ -7,13 +7,16 @@
 @section('title', 'User Management - Curhatin')
 @section('content-title', 'User Management')
 @section('content')
+
 <div class="table-title">
   USER MANAGEMENT
 </div>
+
+
 <div class="table-wrapper">
   <table class="table">
     <tr>
-      <th>#</th>
+      <th>ID</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Username</th>
@@ -44,9 +47,10 @@
       <td>{{ $user->phone }}</td>
       <td><a href="admin/user/edit/{{ $user->id }}"><span class="fa fa-pencil button button-blue  "></span><a href="admin/user/delete/{{ $user->id }}"><span class="fa fa-trash button button-red"></span></td>
     </tr>
-    
       @endforeach
   </table>
 </div>
+
 {{ $users->links() }}
+
 @endsection

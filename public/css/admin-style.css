@@ -20,6 +20,7 @@ body
   position: relative;
   top:10px;
   left:0px;
+  width:100%;
 }
 .side-nav
 {
@@ -38,15 +39,15 @@ body
 }
 .section
 {
-  height: 96%;
-  width: 75%;
+  height: 100%;
+  width: 76%;
   position: fixed;
-  right: 12.5px;
+  left: 22%;
   overflow-x: hidden;
   overflow-y: auto;
   transition: 0.5s;
   float:right;
-
+  margin:0 1%;
 }
 .side-nav-header
 {
@@ -143,11 +144,11 @@ body
 .table-wrapper
 {
 
-  margin:5px;
+  margin:auto;
   background-color:white;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  width:98%;
   overflow-x: auto;
+  width:98%;
 }
 table.table
 {
@@ -171,6 +172,9 @@ table.table
 }
 .table-title
 {
+  margin-left:10px;
+  margin-top:15px;
+  margin-bottom:15px;
   font-weight:bold;
   font-size:25px;
   padding:10px;
@@ -191,14 +195,64 @@ table.table
 {
   background:#2980b9;
 }
+.pagination
+{
+  margin-top:40px;
+}
 ul.pagination
 {
 
+  padding:0;
   list-style-type:none;
 }
 ul.pagination li
 {
   display:inline;
-  padding:10px;
-  background:red;
+  background:white;
+  border-collapse: collapse;
+  margin-left:-5px;
+  border:1px solid #ccc;
+}
+.pagination li a
+{
+
+  padding: 10px 12.5px;
+}
+.pagination li
+{
+  padding: 10px 0;
+}
+.pagination li span
+{
+  padding: 10px 12.5px;
+}
+.pagination li.active
+{
+  background:#ccc;
+  padding:inherit;
+  padding: 10px 0px;
+  color:;
+
+}
+li.active
+{
+  background:#ddd;
+}
+.pagination
+{
+  text-align:center;
+}
+.button-add
+{
+  float:right;
+}
+.pagination a:link
+{
+  text-decoration: none;
+  color:#6c6c6c;
+}
+.pagination a:visited
+{
+  text-decoration:none;
+  color:#6c6c6c;
 }
