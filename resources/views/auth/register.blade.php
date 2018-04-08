@@ -13,8 +13,8 @@
       <option value="f">Female</option>
     </select><br>
     <input type="number" name="phone" placeholder="Phone Number"><br>
-    <input type="password" name="password" placeholder="Kata Sandi" required><br>
-    <input type="password" name="password_confirmation" maxlength="24" placeholder="Kata Sandi" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <input type="password" name="password_confirmation" maxlength="24" placeholder="Password" required><br>
     <input type="submit" value="Register">
   </form>
 </center>

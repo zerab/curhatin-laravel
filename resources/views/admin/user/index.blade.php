@@ -8,11 +8,23 @@
 @section('content-title', 'User Management')
 @section('content')
 
+<div class="table-head">
 <div class="table-title">
   USER MANAGEMENT
 </div>
 
-
+  <div class="button-add" id="add-user-btn">
+    <span class="button button-blue">
+      <span class="fa fa-plus-circle"></span> Add New
+    </span>
+  </div>
+  <div class="search-bar">
+    <form class="" action="index.html" method="post">
+      <input type="text" name="" value="">
+    </form>
+  </div>
+</div>
+@include('layouts.alert')
 <div class="table-wrapper">
   <table class="table">
     <tr>
@@ -45,12 +57,11 @@
         @endif
       </td>
       <td>{{ $user->phone }}</td>
-      <td><a href="admin/user/edit/{{ $user->id }}"><span class="fa fa-pencil button button-blue  "></span><a href="admin/user/delete/{{ $user->id }}"><span class="fa fa-trash button button-red"></span></td>
+      <td><a href="/admin/user/edit/{{ $user->id }}"><span class="fa fa-pencil button button-blue  "></span><a href="/admin/user/delete/{{ $user->id }}"><span class="fa fa-trash button button-red"></span></td>
     </tr>
       @endforeach
   </table>
 </div>
-
 {{ $users->links() }}
-
+@include('admin.user.add-user')
 @endsection

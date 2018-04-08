@@ -4,7 +4,16 @@
       {{ $alert }}
   </div>
 @endif
-
+@if ($errors->any())
+    <div class="alert danger">
+        <span class="closebtn">&times;</span>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <script>
 var close = document.getElementsByClassName("closebtn");
 var i;

@@ -42,7 +42,7 @@
   <div class="nav-link">
     Others<span class="fa fa-caret-down" style="float:right;"></span>
   </div>
- 
+
   <div class="panel">
     try
     try
@@ -52,7 +52,26 @@
     <span class="nav-title">Flagging Management</span>
   </div>
 </a>
-
+<a href="/admin/flagging">
+  <div class="nav-link">
+    <span class="nav-title">Flagging Management</span>
+  </div>
+</a>
+<a href="/admin/flagging">
+  <div class="nav-link">
+    <span class="nav-title">Flagging Management</span>
+  </div>
+</a>
+<a href="/admin/flagging">
+  <div class="nav-link">
+    <span class="nav-title">Flagging Management</span>
+  </div>
+</a>
+<a href="/admin/flagging">
+  <div class="nav-link">
+    <span class="nav-title">Flagging Management</span>
+  </div>
+</a>
 </div>
 </div>
 <script>

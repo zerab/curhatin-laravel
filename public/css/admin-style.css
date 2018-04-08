@@ -15,6 +15,23 @@ body
   background:#fafafa;
   font-family:'Roboto ', helvetica;
 }
+.side-nav::-webkit-scrollbar-track
+{
+	border-radius: 0px;
+
+}
+
+.side-nav::-webkit-scrollbar
+{
+	width: 5px;
+
+}
+
+.side-nav::-webkit-scrollbar-thumb
+{
+	background-color:rgb(0, 121, 136);
+}
+
  .wrapper
 {
   position: relative;
@@ -172,20 +189,42 @@ table.table
 }
 .table-title
 {
-  margin-left:10px;
-  margin-top:15px;
-  margin-bottom:15px;
+
   font-weight:bold;
   font-size:25px;
   padding:10px;
   width:290px;
 }
+.table-head div
+{
+  display:inline;
+}
+.table-head
+{
+  margin-left:10px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+.search-bar
+{
+  float:right;
+}
+.button-add
+{
+  font-weight:bold;
+  position:relative;
+  top:-4px;
+}
 .button
 {
-  padding:10px;
   margin:2px;
+  padding:10px;
   border-radius:5px;
+  box-shadow: unset;
   color:white;
+  background-color:rgba(0, 121, 136, 1);
+  border: none;
+  cursor: pointer;
 }
 .button-red
 {
@@ -244,7 +283,7 @@ li.active
 }
 .button-add
 {
-  float:right;
+
 }
 .pagination a:link
 {
@@ -255,4 +294,131 @@ li.active
 {
   text-decoration:none;
   color:#6c6c6c;
+}
+.modal
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width:40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+  position: relative;
+    top:5px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgba(0, 121, 136, 1);
+    color: white;
+}
+/* Input Styles */
+.form-group-modal input[type=text], .form-group-modal input[type=number], .form-group-modal input[type=password]
+{
+  padding:7.5px;
+  border:1px solid darkgray;
+  border-radius:5px;
+  font-size:15px;
+  width: 95%;
+}
+.form-group-modal input[type=text]:focus, .form-group-modal input[type=number]:focus, .form-group-modal input[type=password]:focus
+{
+  border:1px solid rgba(0, 121, 136, 1);
+  box-shadow: 0px 0px 5px rgba(0, 121, 136, 1);
+
+  outline:none;
+  transition: 0.3s;
+}
+
+.form-group-modal input[type=date]
+{
+  padding:7.5px;
+
+}
+.form-group-modal .form-label
+{
+  text-transform: capitalize;
+  font-size:14px;
+}
+.modal-content div.form-group-modal
+{
+  display:inline-block;
+  margin:10px 2%;
+  width:45%;
+}
+#add-user-btn:hover, #add-user-btn:active
+{
+  cursor:pointer;
+}
+/* alert */
+.alert {
+    padding: 20px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.danger {background-color: #f44336;}
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
 }

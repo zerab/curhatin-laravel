@@ -32,3 +32,6 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('/admin', 'AdminController@dashboard');
   Route::get('/admin/logout', 'AdminController@logout');
   Route::get('/admin/user', 'UserController@index');
+  Route::get('/admin/user/edit/{id}', 'AdminController@dashboard');
+  Route::post('/admin/user/add', 'UserController@store');
+  Route::get('/admin/user/edit/{id}', 'UserController@edit');

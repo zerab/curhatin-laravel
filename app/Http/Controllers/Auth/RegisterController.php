@@ -58,7 +58,7 @@ class RegisterController extends Controller
      */
     protected function create()
     {
-    /* $this->validate(request(), [
+    $this->validate(request(), [
           'firstname' => 'required|string|max:32',
           'lastname' => 'required|string|max:32',
           'email' => 'required|string|email|max:64|unique:users',
@@ -66,9 +66,7 @@ class RegisterController extends Controller
           'gender' => 'required|max:1',
           'phone' => 'required|min:6|max:16|numeric',
           'password' => 'required|string|min:6|confirmed',
-          'password_confirmation' => 'required|string|min:6|confirmed'
       ]);
-*/
       $user = User::create([
           'firstname' => request('firstname'),
           'lastname' => request('lastname'),
