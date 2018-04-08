@@ -46,6 +46,35 @@ class UserController extends Controller
     public function edit($id)
     {
       $user = User::find($id);
-      
+      return view('admin.user.edit', ['user' => $user]);
+    }
+    public function update($id)
+    {
+      $this->validate(request(), [
+            'firstname' => 'required|string|max:32',
+            'lastname' => 'required|string|max:32',
+            'username' => 'required|string|max:32',
+            'email' => 'required|string|email|max:64|exists:users',
+            'birthplace' => 'required|max:64',
+            'gender' => 'required|max:1',
+            'phone' => 'required|digits_between:10,15|numeric',
+        ]);
+        $user = User::findOrFail($id);
+        $user->firstname = request('firstname');
+        $user->lastname = request('lastname');
+        $user->username = request('username');
+        $user->email = request('email');
+        $user->birthplace = request('birthplace');
+        $user->gender = request('gender');
+        $user->phone = request('phone');
+        $user->save();
+        return redirect('/admin/user')->with('alert-success-update', 'The data has been updated.');
+
+    }
+    public function delete($id)
+    {
+      $user = User::find($id);
+      $user->delete();
+      return redirect('/admin/user')->with('alert-success-delete', 'Data has been succesfully deleted.');
     }
 }

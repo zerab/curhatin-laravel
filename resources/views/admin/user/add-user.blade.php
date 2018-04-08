@@ -7,7 +7,7 @@
     <form action="/admin/user/add" method="post">
       {{ csrf_field() }}
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         First Name
         </div>
         <div>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Last Name
         </div>
         <div>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Username
         </div>
         <div>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Email
         </div>
         <div>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Birthdate
         </div>
         <div>
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Birth Place
         </div>
         <div>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Gender
         </div>
         <div style="margin:7.5px;">
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Phone Number
         </div>
         <div>
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Password
         </div>
         <div>
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="form-group-modal">
-        <div class="form-label">
+        <div class="form-label-modal">
         Password Confirmation
         </div>
         <div>

@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('/admin', 'AdminController@dashboard');
   Route::get('/admin/logout', 'AdminController@logout');
   Route::get('/admin/user', 'UserController@index');
-  Route::get('/admin/user/edit/{id}', 'AdminController@dashboard');
   Route::post('/admin/user/add', 'UserController@store');
-  Route::get('/admin/user/edit/{id}', 'UserController@edit');
+  Route::get('/admin/user/{id}/edit', 'UserController@edit');
+  Route::patch('/admin/user/{id}/update', 'UserController@update');
+  Route::get('/admin/user/{id}/delete', 'UserController@delete');

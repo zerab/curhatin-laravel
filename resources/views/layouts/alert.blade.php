@@ -4,6 +4,18 @@
       {{ $alert }}
   </div>
 @endif
+@if ($alert = Session::get('alert-success-update'))
+  <div class="alert success">
+    <span class="closebtn">&times;</span>
+      {{ $alert }}
+  </div>
+@endif
+@if ($alert = Session::get('alert-success-delete'))
+  <div class="alert success">
+    <span class="closebtn">&times;</span>
+      {{ $alert }}
+  </div>
+@endif
 @if ($errors->any())
     <div class="alert danger">
         <span class="closebtn">&times;</span>

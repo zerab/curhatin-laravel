@@ -64,7 +64,7 @@ body
   overflow-y: auto;
   transition: 0.5s;
   float:right;
-  margin:0 1%;
+  padding: 0 1%;
 }
 .side-nav-header
 {
@@ -378,7 +378,7 @@ li.active
   padding:7.5px;
 
 }
-.form-group-modal .form-label
+.form-group-modal .form-label-modal
 {
   text-transform: capitalize;
   font-size:14px;
@@ -421,4 +421,50 @@ li.active
 
 .closebtn:hover {
     color: black;
+}
+.form-group input[type=text], .form-group input[type=password], .form-group input[type=number]
+{
+  padding:10px;
+  font-size:15px;
+  width:90%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border:none;
+}
+.form-group input[type=text]:hover, .form-group input[type=text]:focus, .form-group input[type=password]:hover, .form-group input[type=password]:focus, .form-group input[type=number]:hover, .form-group input[type=number]:focus
+{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  outline:none;
+}
+.form-group input[type=date]
+{
+  padding:7px;
+  font-size:15px;
+  width:91%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border:none;
+}
+.form-group .form-label
+{
+  font-size:13px;
+}
+.form-group div
+{
+  display:block;
+}
+.form-group
+{
+  margin:15px;
+  width:45%;
+  height:20%;
+}
+form.form-edit div.form-group
+{
+  display:inline-block;
+}
+form.form-edit
+{
+  position: relative;
+  left:3%;
 }

@@ -57,7 +57,7 @@
         @endif
       </td>
       <td>{{ $user->phone }}</td>
-      <td><a href="/admin/user/edit/{{ $user->id }}"><span class="fa fa-pencil button button-blue  "></span><a href="/admin/user/delete/{{ $user->id }}"><span class="fa fa-trash button button-red"></span></td>
+      <td><a href="/admin/user/{{ $user->id }}/edit"><span class="fa fa-pencil button button-blue  "></span><a href="/admin/user/{{ $user->id }}/delete"><span class="fa fa-trash button button-red"></span></td>
     </tr>
       @endforeach
   </table>
